@@ -1,0 +1,33 @@
+.category-glyph {
+  display: block;
+  flex: none;
+  fill: none;
+  stroke: currentColor;
+  stroke-width: 1.55;
+  stroke-linecap: round;
+  stroke-linejoin: round;
+}
+.category-name {
+  display: inline-flex;
+  align-items: center;
+  gap: .72rem;
+  min-width: 0;
+}
+.category-name .category-glyph {
+  width: 1.5rem;
+  height: 1.5rem;
+  color: #a5cabb;
+}
+.interest-option input:checked + span .category-glyph { color: #c0e7d3; }
+.interest-option > span { gap: .65rem; }
+.interest-option .category-name { overflow-wrap: anywhere; }
+@media (max-width: 520px) {
+  .interest-option > span { padding-inline: .75rem; gap: .4rem; }
+  .interest-option .category-name { gap: .4rem; }
+  .interest-option .category-glyph { width: 1.2rem; height: 1.2rem; }
+}
+@media (max-width: 400px) {
+  .interest-grid { grid-template-columns: 1fr; gap: .65rem; }
+  .interest-option > span { min-height: 52px; padding: .8rem 1rem; }
+  .interest-option .category-name { gap: .7rem; }
+}

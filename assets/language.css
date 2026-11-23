@@ -1,0 +1,24 @@
+.nav-shell > .language-switch {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 7px;
+  min-height: 40px;
+  min-width: 50px;
+  padding: 0 8px;
+  color: var(--text, #e9eee9);
+  font-size: .84rem;
+  line-height: 1;
+  white-space: nowrap;
+}
+.language-switch svg { width: 16px; height: 16px; flex: 0 0 16px; }
+.language-switch:hover { color: #c4f1da; }
+:lang(zh-CN) .eyebrow, :lang(zh-CN) .lot-label { letter-spacing: .10em; }
+html:lang(zh-CN) :is(h1, h2, h3) {
+  font-family: "DM Serif Text", "Songti SC", "Noto Serif CJK SC", "STSong", serif;
+  letter-spacing: -.025em;
+  text-wrap: pretty;
+}
+html:lang(zh-CN) .hero-copy h1 { line-height: 1.12; }
+html:lang(zh-CN) .hero-description { line-height: 1.75; }
+html:lang(zh-CN) .detail-condition, html:lang(zh-CN) .field-help { line-height: 1.65; }

@@ -1,0 +1,58 @@
+.sell-layout .content-panel, .page-relist .content-panel {
+  background:linear-gradient(135deg,rgba(29,54,44,.72),rgba(12,26,22,.64));
+  border:1px solid #b6dac53a;
+  box-shadow:inset 0 1px 0 #e4f8e00c,0 18px 48px #030d091f;
+  -webkit-backdrop-filter:blur(5px);
+  backdrop-filter:blur(5px);
+}
+.sell-layout .upload-box { background:#10251b42; }
+.listing-money { position:relative; }
+.listing-money>span {
+  position:absolute; left:14px; top:50%; transform:translateY(-50%);
+  font-size:.9rem; color:var(--accent); pointer-events:none;
+}
+.form-field .listing-money input[type=number] { padding-left:33px; appearance:textfield; -moz-appearance:textfield; }
+.listing-money input::-webkit-inner-spin-button,.listing-money input::-webkit-outer-spin-button { -webkit-appearance:none; margin:0; }
+.form-field input.listing-native-date { display:none; }
+.listing-date-trigger {
+  display:flex; align-items:center; justify-content:space-between; width:100%; gap:10px; min-height:53px;
+  padding:12px 15px; text-align:left; font:inherit; font-size:.9375rem;
+  color:var(--paper); border:1px solid #d8e5d342; border-radius:4px; background:#12231ab8;
+}
+.listing-date-trigger::after {
+  content:''; display:block; width:17px; height:16px; border:1.5px solid var(--accent); border-radius:3px;
+  background:linear-gradient(to bottom,transparent 4px,var(--accent) 4px,var(--accent) 5px,transparent 5px);
+}
+.listing-date-trigger:hover,.listing-date-trigger:focus-visible { border-color:var(--accent); background:#1a3027; }
+.listing-date-trigger[aria-invalid=true] { border-color:#dea89f; }
+.listing-calendar {
+  box-sizing:border-box; width:min(352px,calc(100vw - 24px)); max-height:calc(100dvh - 28px); overflow:auto;
+  padding:22px; margin:auto; color:var(--paper); border:1px solid #8fb7a674; border-radius:12px;
+  background:linear-gradient(145deg,#243a32,#14241f 78%); box-shadow:0 25px 80px #030a08a6;
+}
+.listing-calendar:not([open]), .listing-calendar [hidden] { display:none; }
+.listing-calendar::backdrop { background:#040d0b91; backdrop-filter:blur(3px); }
+.listing-calendar button { cursor:pointer; }
+.calendar-header,.calendar-month,.calendar-time,.calendar-actions { display:flex; align-items:center; gap:8px; }
+.calendar-header,.calendar-month { justify-content:space-between; }
+.calendar-header h2 { font:normal 1.55rem/1.2 var(--serif); margin:0; }
+.calendar-header button,.calendar-month button { height:36px; width:36px; border:1px solid #c8e5d02e; background:transparent; border-radius:50%; color:var(--accent); font-size:1.2rem; line-height:1; }
+.calendar-month { margin:20px 0 12px; }
+.calendar-month strong { font-size:.96rem; }
+.calendar-week,.calendar-days { display:grid; grid-template-columns:repeat(7,minmax(0,1fr)); gap:2px; text-align:center; }
+.calendar-week { font-size:.68rem; color:#b7c8bc; margin-bottom:7px; }
+.calendar-days button { position:relative; height:36px; padding:0; border:0; border-radius:6px; color:var(--paper); background:transparent; font-size:.85rem; font-variant-numeric:tabular-nums; }
+.calendar-days button:hover:enabled,.calendar-month button:hover:enabled,.calendar-header button:hover { background:#d2f1df1a; }
+.calendar-days button[aria-current=date]::after { content:''; position:absolute; width:4px; height:4px; background:currentColor; border-radius:100%; bottom:3px; left:calc(50% - 2px); }
+.calendar-days button[aria-pressed=true],.calendar-days button[aria-pressed=true]:hover { background:var(--accent); color:#10251c; font-weight:650; }
+.listing-calendar button:disabled { opacity:.38; cursor:default; }
+.calendar-time { margin-top:17px; padding:15px 0; border-block:1px solid #a9c6b52d; font-size:.875rem; }
+.calendar-time>span:first-child { margin-right:auto; }
+.calendar-time input { width:54px; min-height:40px; text-align:center; font:inherit; background:#142a20; color:var(--paper); border:1px solid #a9c6b550; border-radius:5px; }
+.calendar-actions { margin-top:15px; justify-content:space-between; }
+.calendar-actions .button { margin-left:auto; min-height:40px; padding:8px 14px; font-size:.85rem; }
+.calendar-actions .text-link { font-size:.8rem; background:none; border:0; color:var(--accent); padding:6px 0; }
+.calendar-error { color:#fac3b6; font-size:.82rem; margin:10px 0 0; }
+@media (prefers-contrast: more), (prefers-reduced-transparency: reduce) {
+  .sell-layout .content-panel,.page-relist .content-panel { background:#14271f; }
+}

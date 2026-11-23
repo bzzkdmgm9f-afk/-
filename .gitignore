@@ -1,0 +1,6 @@
+/config/database.php
+/runtime/*
+!/runtime/.htaccess
+/uploads/*
+!/uploads/.htaccess
+.DS_Store

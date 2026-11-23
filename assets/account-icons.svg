@@ -1,0 +1,7 @@
+<svg xmlns="http://www.w3.org/2000/svg">
+  <symbol id="bell" viewBox="0 0 24 24"><path d="M5 16h14l-2-3v-3a5 5 0 0 0-10 0v3zM10 19a2 2 0 0 0 4 0"/></symbol>
+  <symbol id="cab" viewBox="0 0 24 24"><path d="M4 6h16v13H4zM4 10h16m-10 3h4"/></symbol>
+  <symbol id="archive" viewBox="0 0 24 24"><path d="M4 4h16v4H4zM6 8v12h12V8M10 12h4"/></symbol>
+  <symbol id="icon-swap" viewBox="0 0 24 24"><path d="M4 8h15l-3-3m4 11H5l3 3"/></symbol>
+  <symbol id="exit" viewBox="0 0 24 24"><path d="M10 4H5v16h5m0-8h10l-4-4m4 4-4 4"/></symbol>
+</svg>

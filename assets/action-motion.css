@@ -1,0 +1,140 @@
+.action-icon {
+  display: block;
+  flex: 0 0 21px;
+  width: 21px;
+  height: 21px;
+  overflow: visible;
+}
+
+.bid-submit,
+.watch-detail > button {
+  display: grid;
+  grid-template-columns: 21px minmax(0, 10.5rem);
+  align-items: center;
+  justify-content: center;
+  gap: 9px;
+}
+
+.bid-submit > span,
+.watch-detail [data-watch-label] {
+  width: 100%;
+  text-align: center;
+  line-height: 1.4;
+}
+
+.gavel-swing {
+  transform-box: view-box;
+  transform-origin: 15px 18px;
+}
+
+.is-submitting .gavel-swing {
+  animation: gavel-strike 380ms cubic-bezier(.3, .05, .3, 1) both;
+}
+
+.is-submitting .gavel-base {
+  animation: gavel-impact 380ms ease-out both;
+}
+
+.heart-shape,
+.heart-ripple {
+  transform-box: view-box;
+  transform-origin: 12px 12px;
+}
+
+.heart-ripple {
+  fill: none;
+  stroke: currentColor;
+  stroke-width: 1;
+  opacity: 0;
+  pointer-events: none;
+}
+
+.motion-watch-added .heart-shape {
+  animation: heart-save 420ms cubic-bezier(.25, .7, .3, 1) both;
+}
+
+.motion-watch-added .heart-ripple {
+  animation: heart-ring 420ms ease-out both;
+}
+
+.motion-watch-removed .heart-shape {
+  animation: heart-unsave 300ms ease-out both;
+}
+
+[data-watch-control][aria-busy="true"] > button {
+  cursor: progress;
+  opacity: .72;
+}
+
+.watch-feedback {
+  display: block;
+  margin-top: 9px;
+  color: #f4c9bc;
+  font-size: .75rem;
+  line-height: 1.5;
+}
+
+.watch-form .watch-feedback {
+  position: absolute;
+  z-index: 3;
+  top: 100%;
+  right: 0;
+  width: 210px;
+  padding: 9px 12px;
+  border: 1px solid #bd8e7e;
+  border-radius: 8px;
+  background: #291e19;
+  box-shadow: 0 5px 18px #0003;
+}
+
+.watch-feedback[hidden] {
+  display: none;
+}
+
+@keyframes gavel-strike {
+  0% { transform: rotate(0); }
+  28% { transform: rotate(26deg); }
+  57% { transform: rotate(-12deg); }
+  76% { transform: rotate(4deg); }
+  100% { transform: rotate(0); }
+}
+
+@keyframes gavel-impact {
+  0%, 48%, 100% { transform: translateY(0); }
+  60% { transform: translateY(1px); }
+}
+
+@keyframes heart-save {
+  0% { transform: scale(.85); }
+  38% { transform: scale(1.2); }
+  68% { transform: scale(.96); }
+  100% { transform: scale(1); }
+}
+
+@keyframes heart-unsave {
+  0% { transform: scale(1); }
+  45% { transform: scale(.76); }
+  100% { transform: scale(1); }
+}
+
+@keyframes heart-ring {
+  0% { transform: scale(.5); opacity: .55; }
+  100% { transform: scale(1.4); opacity: 0; }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .gavel-swing,
+  .gavel-base,
+  .heart-shape,
+  .heart-ripple {
+    animation: none !important;
+  }
+}
+
+@media (forced-colors: active) {
+  .watch-feedback {
+    color: CanvasText;
+    background: Canvas;
+    border-color: CanvasText;
+  }
+}

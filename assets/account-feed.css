@@ -1,0 +1,20 @@
+.account-feed { max-height: min(33rem, calc(100dvh - 7rem)); overflow-y: auto; overscroll-behavior: contain; }
+.account-feed [hidden], .account-feed[hidden] { display: none !important; }
+.account-feed button { background: none; border: 0; color: inherit; font: inherit; cursor: pointer; }
+.account-feed .account-feed-back { padding: .35rem .5rem; display: inline-flex; align-items: center; gap: .5rem; color: #bdd3c9; font-size: .83rem; }
+.account-feed-back > span { font-size: 1.25rem; line-height: 1; }
+.account-feed-heading { display: flex; align-items: center; justify-content: space-between; gap: .6rem; margin: .5rem .5rem .35rem; }
+.account-feed-heading h2 { margin: 0; font-size: 1.25rem; color: #f1f1e8; }
+.account-feed-heading button { color: #b3dbca; font-size: .77rem; padding: .4rem 0; }
+.account-feed-empty, .account-feed-status { margin: .7rem .5rem; color: #b8c9bf; font-size: .84rem; }
+.account-feed-status:empty { display: none; }
+.account-feed-item { margin: 0; border-top: 1px solid #b6d6c51c; }
+.account-feed .account-feed-message { display: grid; grid-template-columns: .4rem minmax(0,1fr); gap: .65rem; width: 100%; text-align: start; padding: .72rem .5rem; border-radius: .4rem; }
+.account-feed-message:hover, .account-feed-message:focus-visible { background: #a8d4bf12; }
+.account-feed-indicator { width: .38rem; height: .38rem; margin-top: .46rem; border-radius: 50%; }
+.account-feed-indicator.is-unread { background: #ff827b; }
+.account-feed-message strong, .account-feed-message time { display: block; }
+.account-feed-message strong { color: #e8efe8; font-size: .88rem; font-weight: 600; }
+.account-feed-summary { display: -webkit-box; -webkit-box-orient: vertical; -webkit-line-clamp: 2; overflow: hidden; overflow-wrap: anywhere; font-size: .82rem; color: #c4d2ca; margin-block: .14rem; }
+.account-feed-message time { color: #a3b7ad; font-size: .73rem; }
+.account-feed-all { display: flex; justify-content: space-between; padding: .75rem .5rem .35rem; color: #b3dbca; font-size: .85rem; border-top: 1px solid #b6d6c529; }

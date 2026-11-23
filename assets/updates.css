@@ -1,0 +1,10 @@
+[data-update-endpoint] { display:inline-flex; align-items:center; gap:6px; }
+.unread-dot, .notification.is-unread .notification-dot {
+  width:7px; height:7px; border-radius:50%; background:#fa827c;
+  box-shadow:0 0 0 2px #301f20;
+}
+.unread-dot { display:inline-block; flex:none; }
+.unread-dot[hidden] { display:none; }
+.menu-toggle { position:relative; }
+.menu-unread { position:absolute; top:3px; right:3px; }
+.notification-meta .text-button { color:var(--teal); text-decoration:underline; text-underline-offset:3px; }

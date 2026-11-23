@@ -1,0 +1,82 @@
+.cabinet-tabs a.is-current { color:var(--teal); font-weight:700; text-decoration:underline; text-underline-offset:9px; }
+.dashboard-grid { align-items:stretch; }
+.dashboard-lot { min-width:0; display:flex; flex-direction:column; border:1px solid var(--line); border-radius:12px; overflow:hidden; background:var(--surface); }
+.dashboard-lot .auction-card { border:0; border-radius:0; flex:1; }
+.dashboard-lot-actions { border-top:1px solid var(--line); padding:18px; display:grid; gap:12px; }
+.dashboard-own-bid { margin:0; font-size:.8rem; color:var(--muted); }
+.dashboard-own-bid strong { color:var(--ink); margin-left:5px; }
+.bid-position { font-size:.8rem; font-weight:600; margin:0; }
+.bid-position.is-leading { color:var(--teal); }
+.bid-position.is-outbid,.dashboard-withdraw { color:#ecc28c; }
+.dashboard-action-row { display:flex; gap:8px; flex-wrap:wrap; }
+.dashboard-lot-actions .text-button { font-size:.78rem; text-decoration:underline; text-underline-offset:4px; }
+.dashboard-interest-list { display:grid; grid-template-columns:repeat(auto-fit,minmax(210px,1fr)); gap:15px; margin-bottom:24px; }
+.dashboard-interest-card { border:1px solid var(--line); border-radius:10px; padding:20px; background:var(--surface); }
+.dashboard-interest-card h3 { font-size:1.1rem; margin:0 0 18px; }
+.dashboard-interest-card a:hover { color:var(--teal); }
+.dashboard-interest-editor .interest-grid { border:0; padding:0; margin:20px 0; }
+.bid-stepper { display:grid; grid-template-columns:44px minmax(0,1fr) 44px; gap:8px; }
+.bid-stepper .currency-input { margin:0; }
+.bid-stepper .currency-input input { width:100%; min-width:0; }
+.bid-step-button { border:1px solid var(--line); border-radius:7px; color:var(--ink); background:var(--surface); font-size:1.4rem; cursor:pointer; }
+.bid-step-button:hover { border-color:var(--teal); color:var(--teal); }
+.bid-step-button:disabled { opacity:.35; cursor:default; }
+
+.dashboard-withdraw-form summary { cursor:pointer; font-size:.78rem; text-decoration:underline; text-underline-offset:4px; }
+.dashboard-withdraw-form details p { font-size:.8rem; color:var(--muted); line-height:1.6; margin:14px 0; }
+.page-dashboard .dashboard-section { padding-top:0; }
+
+#bid-amount { appearance:textfield; -moz-appearance:textfield; }
+#bid-amount::-webkit-inner-spin-button, #bid-amount::-webkit-outer-spin-button { -webkit-appearance:none; margin:0; }
+
+@supports (grid-template-rows:subgrid) {
+  @media (min-width:481px) {
+    .dashboard-grid > .dashboard-lot { display:grid; grid-template-rows:subgrid; grid-row:span 11; }
+    .dashboard-lot > .auction-card { display:grid; grid-template-rows:subgrid; grid-row:1 / span 7; }
+    .dashboard-lot-actions { grid-template-rows:subgrid; grid-row:8 / span 4; row-gap:0; }
+    .dashboard-own-bid { grid-row:1; padding-block-end:10px; }
+    .dashboard-lot-actions > .bid-position { grid-row:2; padding-block-end:10px; }
+    .dashboard-action-row { grid-row:3; align-content:start; align-items:start; }
+    .dashboard-withdraw-form { grid-row:4; padding-block-start:10px; }
+  }
+}
+
+.my-collection { max-width:1152px; margin:0 auto; padding:clamp(24px,4vw,48px) 0; }
+.my-collection [hidden] { display:none; }
+.collection-crumb { margin:0 0 15px; color:var(--muted); font-size:.8rem; }
+.collection-crumb span { margin:0 .45rem; }
+.my-collection h1 { margin:0; font-size:clamp(1.95rem,3.4vw,2.75rem); line-height:1.22; }
+.collection-interests { display:flex; gap:8px; align-items:center; flex-wrap:wrap; margin:18px 0 28px; padding:13px 0; border-block:1px solid var(--line); font-size:.84rem; }
+.collection-interests strong { margin-right:5px; }
+.interest-chip { padding:4px 11px; border-radius:20px; border:1px solid #769f8555; background:#213a2fe8; color:#d4e5da; }
+.interest-chip:hover { border-color:var(--teal); }
+.collection-edit,.collection-activity a,.collection-return { color:var(--teal); text-decoration:underline; text-underline-offset:4px; }
+.collection-edit { margin-left:auto; padding-block:7px; }
+.collection-editor { margin:-9px 0 26px; padding:18px; border:1px solid #71967d70; border-radius:10px; background:#182b23f5; }
+.collection-editor fieldset { margin:0; padding:0; border:0; }
+.collection-editor legend { font-size:.94rem; color:var(--ink); }
+.collection-choices,.collection-editor-actions { display:flex; flex-wrap:wrap; align-items:center; gap:7px 14px; margin-top:10px; }
+.collection-choices label { display:inline-flex; align-items:center; gap:6px; padding:7px 0; cursor:pointer; }
+.collection-choices input { width:15px; height:15px; margin:0; accent-color:var(--teal); }
+.collection-choices .category-name { gap:5px; }
+.collection-choices .category-glyph { width:16px; height:16px; }
+.collection-heading { display:flex; align-items:baseline; gap:9px; margin-bottom:13px; }
+.collection-heading h2 { margin:0; font-size:clamp(1.32rem,2.2vw,1.65rem); }
+.collection-heading span,.collection-info small { font-size:.78rem; color:var(--muted); }
+.collection-grid { display:grid; grid-template-columns:repeat(3,minmax(0,1fr)); align-items:stretch; gap:16px; }
+.collection-lot { position:relative; min-width:0; overflow:hidden; border:1px solid #84a78c47; border-radius:10px; background:#1a2e24ea; }
+.collection-lot-link { display:block; height:100%; }
+.collection-lot-link:focus-visible { outline-offset:-3px; }
+.collection-image { aspect-ratio:1.92; overflow:hidden; background:var(--surface); }
+.collection-image img,.collection-image .no-image { width:100%; height:100%; object-fit:cover; }
+.collection-info { padding:12px 14px; }
+.collection-info h3 { margin:4px 0 0; font-size:1.12rem; font-weight:400; overflow-wrap:anywhere; }
+.collection-lot-link:hover h3 { color:var(--teal); }
+.collection-activity { display:flex; flex-wrap:wrap; align-items:center; gap:9px 18px; margin-top:26px; padding:18px 0; border-top:1px solid var(--line); font-size:.85rem; }
+.collection-return { display:inline-block; margin-bottom:10px; font-size:.85rem; }
+@media(max-width:700px) {
+  .collection-grid { grid-template-columns:repeat(2,minmax(0,1fr)); gap:10px; }
+  .collection-info { padding:10px; }
+  .collection-info h3 { font-size:1rem; }
+  .collection-activity strong { flex-basis:100%; }
+}
